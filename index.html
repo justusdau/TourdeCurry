@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Tour de Curry – Berlin</title>
+  <meta name="description" content="Currywurst-Bewertungen auf Karte." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="splash" class="splash">
+    <div class="splash-inner">
+      <img src="logo.png" alt="Le Tour de Curry Logo" class="logo" id="enterLogo">
+      <button id="enterBtn" class="enter-btn">Karte öffnen</button>
+      <p class="hint">Klicke Logo/Knopf oder drücke Enter/Leertaste</p>
+    </div>
+  </div>
+
+  <div id="map" hidden></div>
+
+  <aside id="panel" hidden aria-label="Steuerfeld">
+  <h1>Tour de Curry</h1>
+    <label for="searchQuery"><strong>Adresse/Ort suchen</strong></label>
+    <div class="search-row">
+      <input id="searchQuery" type="text" placeholder="z. B. Kottbusser Tor, Berlin">
+      <button id="searchBtn" class="btn">Suchen</button>
+    </div>
+    <ul id="searchResults" class="results"></ul>
+    <div class="sep"></div>
+    <div id="count" class="small"></div>
+    <!-- NEU: + Neue Bude -->
+      <div class="sep"></div>
+  <a id="newPlaceBtn" class="btn btn-primary btn-block"
+     href="https://forms.gle/8Tcsioc3CPBFYe2F7" target="_blank" rel="noopener">
+    + Neue Bude
+  </a>
+
+  </aside>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+id,name,lat,lng,rating10,rating5,year,note,gmaps
+row_0,Cult Curry Mitte,52.52957269309015,13.40121575551364,8.12,4,2024,,https://www.google.com/maps/search/?api=1&query=Cult+Curry+Mitte+Berlin
+row_1,Curry Baude,52.54958063118174,13.38698882648957,7.85,4,2024,,https://www.google.com/maps/search/?api=1&query=Curry+Baude+Berlin
+row_2,Curry-Keule,52.55202742572629,13.34988271114602,7.72,4,2024,,https://www.google.com/maps/search/?api=1&query=Curry+Keule+Berlin
+row_3,Curry & Chili,52.5561565817177,13.38386719684907,7.08,4,2024,,https://www.google.com/maps/search/?api=1&query=Curry+%26+Chili+Berlin
+row_4,Currystation 36,52.51511610800573,13.31516572648797,6.51,3,2024,,https://www.google.com/maps/search/?api=1&query=Currystation+36+Berlin
+row_5,Drei Damen vom Grill,52.52779422405084,13.33856705532447,6.25,3,2024,,https://www.google.com/maps/search/?api=1&query=Drei+Damen+vom+Grill+Berlin
+row_6,Absolut Curry,52.52027039651867,13.34743738230857,6.24,3,2024,,https://www.google.com/maps/search/?api=1&query=Absolut+Curry+Berlin
+row_7,Bier's Ku'damm 195,52.50117488997131,13.31882409765142,6.15,3,2024,,https://www.google.com/maps/search/?api=1&query=Bier%27s+Ku%27damm+195+Berlin
+row_8,Eckert's Currywurst,52.51332378748076,13.30529219765203,5.3,3,2024,,https://www.google.com/maps/search/?api=1&query=Eckert%27s+Currywurst+Berlin
+row_9,Curry Wolf,52.50410020612821,13.33544616131925,4.9,2,2024,,https://www.google.com/maps/search/?api=1&query=Curry+Wolf+Berlin
+row_10,Alain’ Snack,52.54971432639277,13.41334432753442,4.36,2,2024,,https://www.google.com/maps/search/?api=1&query=Alain+Snack+Berlin
+row_11,Jörgs Curry Container,52.42249518516788,13.3710072246323,8.89,4,2023,,https://www.google.com/maps/place/J%C3%B6rg's+Curry+Container/data=!4m2!3m1!1s0x47a8452f33162ae1:0xd121ba6058ee0cd2
+row_12,Heike’s Holzkohlengrill,52.41323930230168,13.40155275346771,8.15,4,2023,,https://www.google.com/maps/place/Heike%22s+Holzkohlengrill+Das+Lichtenrader+Original/data=!4m2!3m1!1s0x47a844fd5f631e55:0xdfba2cefbe4c097d
+row_13,Ketch’up 35,52.45244058932225,13.43146475819032,7.96,4,2023,,https://www.google.com/maps/place/Ketch'up+35/data=!4m2!3m1!1s0x47a8457fce5ffa73:0x8559eb099a6320ca
+row_14,Tunnel-Eck,52.52888185030111,13.28156638230902,7.95,4,2023,,"https://www.google.com/maps/place/Tunneleck/@52.5287905,13.279029,17z/data=!3m2!4b1!5s0x47a856cc698bfad3:0xfbc4c931d86e97bc!4m6!3m5!1s0x47a856cc4942d147:0xd31865705bdedbe2!8m2!3d52.5287905!4d13.2816093!16s/g/11btp6n_hd?entry=ttu"
+row_15,Manoùs Schlemmerstube,52.53697438510829,13.27566072648892,7.85,4,2023,,https://www.google.com/maps/place/Manous+Schlemmerbude/data=!4m2!3m1!1s0x47a8574c15328bd1:0xba5827c034edd370
+row_16,zur Bratpfanne,52.45897307397103,13.32302874099729,7.82,4,2023,,https://www.google.com/maps/place/Zur+Bratpfanne/data=!4m2!3m1!1s0x416523c55f7fa947:0x819763fe63fa2dcf
+row_17,Krasselt’s Imbiss,52.45089596098699,13.33955648230542,7.66,4,2023,,https://www.google.com/maps/place/Krasselt's+Imbiss+Berlin/data=!4m2!3m1!1s0x47a85a97cf488d19:0x531b18dc931ab4d1
+row_18,Imbiss zum Würfel II,52.55919692234357,13.3140429111463,7.25,4,2023,,https://www.google.com/maps/place/Zum+W%C3%BCrfel+II/data=!4m2!3m1!1s0x47a8531eb35bc0b3:0x569504fe47579b73
+row_19,Marc’s Kult Curry,52.54485836830313,13.31181238520467,5.84,3,2023,,https://www.google.com/maps/place/Marcs+Kult+Curry/data=!4m2!3m1!1s0x47a851cd924db1f1:0x45f3a6c4a9ac91ef
+row_20,Imbiss Kemmet,52.42428906669397,13.4362417246323,4.7,2,2023,,https://www.google.com/maps/place/Imbiss+Kemmet+seit+1961/data=!4m2!3m1!1s0x47a845a4b5352529:0x2a89a3036db80237
