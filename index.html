@@ -4,39 +4,102 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Le Tour de Curry – Berlin</title>
-  <meta name="description" content="Currywurst-Bewertungen auf Karte." />
+  <meta name="description" content="Berlins beste Currywurst-Buden, bewertet und kartiert." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- SPLASH -->
   <div id="splash" class="splash">
     <div class="splash-inner">
       <img src="logo.png" alt="Le Tour de Curry Logo" class="logo" id="enterLogo">
       <button id="enterBtn" class="enter-btn">Karte öffnen</button>
-      <p class="hint">Klicke Logo/Knopf oder drücke Enter/Leertaste</p>
+      <p class="hint">oder drücke Enter / Leertaste</p>
     </div>
+    <div class="splash-noise"></div>
   </div>
 
-  <div id="map" hidden></div>
+  <!-- APP -->
+  <div id="app" hidden>
+    <!-- MAP -->
+    <div id="map"></div>
 
-  <aside id="panel" hidden aria-label="Steuerfeld">
-  <h1>Tour de Curry</h1>
-    <label for="searchQuery"><strong>Adresse/Ort suchen</strong></label>
-    <div class="search-row">
-      <input id="searchQuery" type="text" placeholder="z. B. Kottbusser Tor, Berlin">
-      <button id="searchBtn" class="btn">Suchen</button>
-    </div>
-    <ul id="searchResults" class="results"></ul>
-    <div class="sep"></div>
-    <div id="count" class="small"></div>
-    <!-- NEU: + Neue Bude -->
-      <div class="sep"></div>
-  <a id="newPlaceBtn" class="btn btn-primary btn-block"
-     href="https://forms.gle/y2QYVzEHKHxpU4dS8" target="_blank" rel="noopener">
-    + Neue Bude
-  </a>
+    <!-- TOGGLE BUTTON (mobile) -->
+    <button id="panelToggle" class="panel-toggle" aria-label="Panel öffnen">☰</button>
 
-  </aside>
+    <!-- PANEL -->
+    <aside id="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span class="title-label">LE TOUR DE</span>
+          <span class="title-big">CURRY</span>
+        </div>
+        <button id="panelClose" class="panel-close">✕</button>
+      </div>
+
+      <div class="section">
+        <a id="newPlaceBtn" href="https://forms.gle/y2QYVzEHKHxpU4dS8" target="_blank" rel="noopener" class="new-place-btn">
+          + Neue Bude 
+        </a>
+      </div>
+
+      <!-- SUCHE -->
+      <div class="section">
+        <label class="section-label">📍 Adresse suchen</label>
+        <div class="search-row">
+          <input id="searchQuery" type="text" placeholder="z. B. Kottbusser Tor …" autocomplete="off">
+          <button id="searchBtn" class="btn-primary">→</button>
+        </div>
+        <ul id="searchResults" class="results"></ul>
+      </div>
+
+      <!-- FILTER -->
+      <div class="section">
+        <label class="section-label">🎛 Filter</label>
+        <div class="filter-row">
+          <div class="filter-group">
+            <span class="filter-label">Jahr</span>
+            <div class="pill-group" id="yearFilter">
+              <button class="pill active" data-year="all">Alle</button>
+              <button class="pill" data-year="2025">2025</button>
+              <button class="pill" data-year="2024">2024</button>
+              <button class="pill" data-year="2023">2023</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label">Min. Bewertung</span>
+            <div class="pill-group" id="ratingFilter">
+              <button class="pill active" data-min="0">Alle</button>
+              <button class="pill" data-min="7">7+</button>
+              <button class="pill" data-min="8">8+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANGLISTE -->
+      <div class="section">
+        <div class="section-header-row">
+          <label class="section-label">🏆 Rangliste</label>
+          <span id="count" class="count-badge"></span>
+        </div>
+        <ul id="rankList" class="rank-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <!-- LEGEND -->
+  <div id="legend" hidden>
+    <div class="legend-title">Bewertung</div>
+    <div class="legend-item"><span class="leg-dot r5"></span> Sehr gut (9–10)</div>
+    <div class="legend-item"><span class="leg-dot r4"></span> Gut (7–8.9)</div>
+    <div class="legend-item"><span class="leg-dot r3"></span> Okay (5–6.9)</div>
+    <div class="legend-item"><span class="leg-dot r2"></span> Naja (3–4.9)</div>
+    <div class="legend-item"><span class="leg-dot r1"></span> Schwach (&lt;3)</div>
+  </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="app.js"></script>
