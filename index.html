@@ -26,18 +26,30 @@
       <!-- INFO RECHTS -->
       <div class="splash-info">
         <div class="info-card">
-          <div class="info-heading">🌭 Was ist das?</div>
-          <p>Eine persönliche Bewertungskarte der besten (und schlechtesten) Currywurst-Buden Berlins – besucht und bewertet von echten Enthusiasten.</p>
+          <div class="info-heading">Was ist das?</div>
+          <p>Eine persönliche Bewertungskarte der besten (und schlechtesten) Currywurst-Buden Berlins – besucht und bewertet von Mitglieder/innen der Mantamaps.</p>
 
-          <div class="info-heading">🎯 Wie wird bewertet?</div>
-          <p>6 Kategorien, Schulnoten-Skala (1 = sehr gut):</p>
+          <div class="info-heading">Wie wird bewertet?</div>
+          <p>6 Hauptkategorien, Schulnoten-Skala (1 = sehr gut):</p>
           <div class="info-cats">
             <span>🌭 Wurst</span><span>🍅 Soße</span><span>🍟 Pommes</span>
             <span>🥚 Mayo</span><span>🏠 Ambiente</span><span>💰 Preis-Leistung</span>
           </div>
 
-          <div class="info-heading">📊 Gesamtbewertung</div>
-          <p>Durchschnitt aller Kategorien & Bewerter → umgerechnet auf <strong>10er-Skala</strong>:</p>
+          <div class="info-heading">Ansichten wechseln</div>
+          <p>Unten auf der Karte kannst du zwischen verschiedenen Ansichten wechseln – je nachdem worauf du Wert legst, fall du z.B doch nur nach der Suche  einer schönen Location bist oder die leckerste Mayo finden willst:  :</p>
+          <div class="info-cats">
+            <span>🏆 Gesamt</span>
+            <span>🌭 Was n Wurst</span>
+            <span>🍅 Soße reicht mir</span>
+            <span>🍟 Bock auf geile Pommes</span>
+            <span>🥚 Hat jemand Mayo gesagt?</span>
+            <span>🏠 Ich bin wegen dem Flair hier</span>
+            <span>💰 Knapp bei Kasse</span>
+          </div>
+
+          <div class="info-heading">Gesamtbewertung</div>
+          <p>Durchschnitt aller Kategorien & Bewerter wird nach einer ausgeklügelten Formel gewichtet → umgerechnet auf <strong>10er-Skala</strong>:</p>
           <div class="info-legend">
             <div><span class="leg-dot r5"></span> Sehr gut (9–10)</div>
             <div><span class="leg-dot r4"></span> Gut (7–8.9)</div>
@@ -56,6 +68,9 @@
   <div id="app" hidden>
     <!-- MAP -->
     <div id="map"></div>
+
+    <!-- MODE BAR -->
+    <div id="modebar"></div>
 
     <!-- TOGGLE BUTTON (mobile) -->
     <button id="panelToggle" class="panel-toggle" aria-label="Panel öffnen">☰</button>
