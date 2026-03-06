@@ -91,14 +91,16 @@
     map.fitBounds(L.latLngBounds(allCoords), { padding: [40, 40], maxZoom: 13 });
 
     /* ── FILTER STATE ────────────────────────────── */
-    let filterYear   = "all";
+    let filterYear      = "all";
     let filterMinRating = 0;
+    let filterRclass    = null; // legend filter
 
     function getVisible() {
       return PLACES.filter(p => {
-        const yearOk   = filterYear === "all" || p.year === +filterYear;
-        const ratingOk = p.rating10 >= filterMinRating;
-        return yearOk && ratingOk;
+        const yearOk    = filterYear === "all" || p.year === +filterYear;
+        const ratingOk  = p.rating10 >= filterMinRating;
+        const rclassOk  = !filterRclass || ratingClass(p.rating10) === filterRclass;
+        return yearOk && ratingOk && rclassOk;
       });
     }
 
@@ -169,6 +171,33 @@
         filterMinRating = +btn.dataset.min;
         applyFilters();
       });
+    });
+
+    /* ── LEGEND FILTER ───────────────────────────── */
+    const legendReset = document.getElementById("legendReset");
+    document.querySelectorAll(".legend-item.clickable").forEach(item => {
+      item.addEventListener("click", () => {
+        const rc = item.dataset.rclass;
+        if (filterRclass === rc) {
+          // toggle off
+          filterRclass = null;
+          document.querySelectorAll(".legend-item.clickable").forEach(i => i.classList.remove("active"));
+          legendReset.hidden = true;
+        } else {
+          filterRclass = rc;
+          document.querySelectorAll(".legend-item.clickable").forEach(i => i.classList.remove("active"));
+          item.classList.add("active");
+          legendReset.hidden = false;
+        }
+        applyFilters();
+      });
+    });
+
+    legendReset.addEventListener("click", () => {
+      filterRclass = null;
+      document.querySelectorAll(".legend-item.clickable").forEach(i => i.classList.remove("active"));
+      legendReset.hidden = true;
+      applyFilters();
     });
 
     /* initial render */

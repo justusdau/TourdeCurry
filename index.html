@@ -15,9 +15,39 @@
   <!-- SPLASH -->
   <div id="splash" class="splash">
     <div class="splash-inner">
-      <img src="logo.png" alt="Le Tour de Curry Logo" class="logo" id="enterLogo">
-      <button id="enterBtn" class="enter-btn">Karte öffnen</button>
-      <p class="hint">oder drücke Enter / Leertaste</p>
+
+      <!-- LOGO LINKS -->
+      <div class="splash-logo-col">
+        <img src="logo.png" alt="Le Tour de Curry Logo" class="logo" id="enterLogo">
+        <button id="enterBtn" class="enter-btn">Karte öffnen</button>
+        <p class="hint">oder drücke Enter / Leertaste</p>
+      </div>
+
+      <!-- INFO RECHTS -->
+      <div class="splash-info">
+        <div class="info-card">
+          <div class="info-heading">🌭 Was ist das?</div>
+          <p>Eine persönliche Bewertungskarte der besten (und schlechtesten) Currywurst-Buden Berlins – besucht und bewertet von echten Enthusiasten.</p>
+
+          <div class="info-heading">🎯 Wie wird bewertet?</div>
+          <p>6 Kategorien, Schulnoten-Skala (1 = sehr gut):</p>
+          <div class="info-cats">
+            <span>🌭 Wurst</span><span>🍅 Soße</span><span>🍟 Pommes</span>
+            <span>🥚 Mayo</span><span>🏠 Ambiente</span><span>💰 Preis-Leistung</span>
+          </div>
+
+          <div class="info-heading">📊 Gesamtbewertung</div>
+          <p>Durchschnitt aller Kategorien & Bewerter → umgerechnet auf <strong>10er-Skala</strong>:</p>
+          <div class="info-legend">
+            <div><span class="leg-dot r5"></span> Sehr gut (9–10)</div>
+            <div><span class="leg-dot r4"></span> Gut (7–8.9)</div>
+            <div><span class="leg-dot r3"></span> Okay (5–6.9)</div>
+            <div><span class="leg-dot r2"></span> Naja (3–4.9)</div>
+            <div><span class="leg-dot r1"></span> Schwach (&lt;3)</div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <div class="splash-noise"></div>
   </div>
@@ -42,7 +72,7 @@
 
       <div class="section">
         <a id="newPlaceBtn" href="https://forms.gle/y2QYVzEHKHxpU4dS8" target="_blank" rel="noopener" class="new-place-btn">
-          + Neue Bude 
+          + Neue Bude vorschlagen
         </a>
       </div>
 
@@ -94,11 +124,12 @@
   <!-- LEGEND -->
   <div id="legend" hidden>
     <div class="legend-title">Bewertung</div>
-    <div class="legend-item"><span class="leg-dot r5"></span> Sehr gut (9–10)</div>
-    <div class="legend-item"><span class="leg-dot r4"></span> Gut (7–8.9)</div>
-    <div class="legend-item"><span class="leg-dot r3"></span> Okay (5–6.9)</div>
-    <div class="legend-item"><span class="leg-dot r2"></span> Naja (3–4.9)</div>
-    <div class="legend-item"><span class="leg-dot r1"></span> Schwach (&lt;3)</div>
+    <div class="legend-item clickable" data-rclass="r5"><span class="leg-dot r5"></span> Sehr gut (9–10)</div>
+    <div class="legend-item clickable" data-rclass="r4"><span class="leg-dot r4"></span> Gut (7–8.9)</div>
+    <div class="legend-item clickable" data-rclass="r3"><span class="leg-dot r3"></span> Okay (5–6.9)</div>
+    <div class="legend-item clickable" data-rclass="r2"><span class="leg-dot r2"></span> Naja (3–4.9)</div>
+    <div class="legend-item clickable" data-rclass="r1"><span class="leg-dot r1"></span> Schwach (&lt;3)</div>
+    <div class="legend-reset" id="legendReset" hidden>✕ Filter zurücksetzen</div>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
