@@ -516,7 +516,7 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px 14px;
-  z-index: 999;
+  z-index: 1001;
   box-shadow: 0 4px 16px rgba(0,0,0,.12);
 }
 .legend-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
@@ -549,6 +549,7 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
     transform: translateX(110%);
     box-shadow: -8px 0 40px rgba(0,0,0,.25);
     border-left: 1px solid var(--border);
+    z-index: 1002;
   }
   #panel.open { transform: translateX(0); }
 
