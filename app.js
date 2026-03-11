@@ -69,8 +69,14 @@
     const panel     = document.getElementById("panel");
     const toggleBtn = document.getElementById("panelToggle");
     const closeBtn  = document.getElementById("panelClose");
-    toggleBtn.addEventListener("click", () => panel.classList.toggle("open"));
-    closeBtn.addEventListener("click",  () => panel.classList.remove("open"));
+    toggleBtn.addEventListener("click", () => {
+      panel.classList.toggle("open");
+      if (window.innerWidth <= 700) legend.style.display = panel.classList.contains("open") ? "none" : "block";
+    });
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+      if (window.innerWidth <= 700) legend.style.display = "block";
+    });
 
     /* ── MODE BAR ────────────────────────────────── */
     const modebar = document.getElementById("modebar");
