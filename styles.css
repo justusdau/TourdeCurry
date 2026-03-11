@@ -254,8 +254,16 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
 
 /* mobile: stack vertically */
 @media (max-width: 680px) {
-  .splash-inner { flex-direction: column; gap: 24px; }
-  .logo { width: min(60vw, 260px); }
+  .splash { align-items: flex-start; overflow-y: auto; padding: 0; }
+  .splash-inner {
+    flex-direction: column; gap: 16px;
+    align-items: center; padding: 24px 16px 32px;
+    min-height: 100%; width: 100%;
+  }
+  .splash-logo-col { width: 100%; }
+  .logo { width: min(55vw, 220px); }
+  .splash-info { width: 100%; }
+  .info-card { padding: 14px 16px; font-size: 12px; }
 }
 
 @keyframes fadeUp {
@@ -547,5 +555,16 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
   .panel-toggle { display: flex; align-items: center; justify-content: center; }
   .panel-close  { display: flex; }
 
-  #legend { bottom: 16px; left: 8px; right: auto; }
+  /* legend: oben links, kompakt */
+  #legend {
+    bottom: auto; top: 12px; left: 8px;
+    padding: 8px 10px;
+  }
+  .legend-title { display: none; }
+  .legend-item  { font-size: 11px; margin-bottom: 2px; }
+
+  /* modebar: unten, kleinere buttons */
+  #modebar { bottom: 12px; padding: 4px 6px; gap: 4px; }
+  .mode-btn { padding: 6px 9px; }
+  .mode-icon { font-size: 16px; }
 }
