@@ -556,8 +556,8 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
   .panel-toggle { display: flex; align-items: center; justify-content: center; }
   .panel-close  { display: flex; }
 
-  /* legend: auf Mobile komplett ausblenden */
-  #legend { display: none; }
+  /* legend: auf Mobile kleiner aber sichtbar */
+  #legend { display: block; bottom: 80px; left: 8px; padding: 8px 10px; }
 
   /* modebar: unten, kleinere buttons */
   #modebar { bottom: 12px; padding: 4px 6px; gap: 4px; }
