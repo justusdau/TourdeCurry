@@ -46,17 +46,20 @@
     const toggleBtn = document.getElementById("panelToggle");
     const closeBtn  = document.getElementById("panelClose");
     toggleBtn.addEventListener("click", () => {
-      panel.classList.toggle("open");
-      panel.hidden = false;
-      toggleBtn.classList.remove("visible");
-      if (window.innerWidth <= 700) legend.style.display = panel.classList.contains("open") ? "none" : "block";
+      if (window.innerWidth <= 700) {
+        panel.classList.toggle("open");
+        legend.style.display = panel.classList.contains("open") ? "none" : "block";
+      } else {
+        panel.classList.remove("collapsed");
+        toggleBtn.classList.remove("visible");
+      }
     });
     closeBtn.addEventListener("click", () => {
       if (window.innerWidth <= 700) {
         panel.classList.remove("open");
         legend.style.display = "block";
       } else {
-        panel.hidden = true;
+        panel.classList.add("collapsed");
         toggleBtn.classList.add("visible");
       }
     });

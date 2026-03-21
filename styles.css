@@ -317,6 +317,10 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
 
 #map { flex: 1; position: relative; }
 
+#panel.collapsed {
+  transform: translateX(100%);
+}
+
 /* ── PANEL ───────────────────────────────────────── */
 #panel {
   width: var(--panel-w);
