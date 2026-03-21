@@ -47,11 +47,18 @@
     const closeBtn  = document.getElementById("panelClose");
     toggleBtn.addEventListener("click", () => {
       panel.classList.toggle("open");
+      panel.hidden = false;
+      toggleBtn.classList.remove("visible");
       if (window.innerWidth <= 700) legend.style.display = panel.classList.contains("open") ? "none" : "block";
     });
     closeBtn.addEventListener("click", () => {
-      panel.classList.remove("open");
-      if (window.innerWidth <= 700) legend.style.display = "block";
+      if (window.innerWidth <= 700) {
+        panel.classList.remove("open");
+        legend.style.display = "block";
+      } else {
+        panel.hidden = true;
+        toggleBtn.classList.add("visible");
+      }
     });
 
     /* ── MODE BAR ────────────────────────────────── */
