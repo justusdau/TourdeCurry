@@ -46,22 +46,12 @@
     const toggleBtn = document.getElementById("panelToggle");
     const closeBtn  = document.getElementById("panelClose");
     toggleBtn.addEventListener("click", () => {
-      if (window.innerWidth <= 700) {
-        panel.classList.toggle("open");
-        legend.style.display = panel.classList.contains("open") ? "none" : "block";
-      } else {
-        panel.classList.remove("collapsed");
-        toggleBtn.classList.remove("visible");
-      }
+      panel.classList.toggle("open");
+      if (window.innerWidth <= 700) legend.style.display = panel.classList.contains("open") ? "none" : "block";
     });
     closeBtn.addEventListener("click", () => {
-      if (window.innerWidth <= 700) {
-        panel.classList.remove("open");
-        legend.style.display = "block";
-      } else {
-        panel.classList.add("collapsed");
-        toggleBtn.classList.add("visible");
-      }
+      panel.classList.remove("open");
+      if (window.innerWidth <= 700) legend.style.display = "block";
     });
 
     /* ── MODE BAR ────────────────────────────────── */
